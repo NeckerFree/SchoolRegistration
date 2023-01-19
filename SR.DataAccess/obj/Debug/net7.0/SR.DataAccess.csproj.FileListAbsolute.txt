@@ -1,0 +1,17 @@
+C:\Elio\Development\Projects\SchoolRegistration\SR.DataAccess\obj\Debug\net7.0\SR.DataAccess.csproj.AssemblyReference.cache
+C:\Elio\Development\Projects\SchoolRegistration\SR.DataAccess\obj\Debug\net7.0\SR.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Elio\Development\Projects\SchoolRegistration\SR.DataAccess\obj\Debug\net7.0\SR.DataAccess.AssemblyInfoInputs.cache
+C:\Elio\Development\Projects\SchoolRegistration\SR.DataAccess\obj\Debug\net7.0\SR.DataAccess.AssemblyInfo.cs
+C:\Elio\Development\Projects\SchoolRegistration\SR.DataAccess\obj\Debug\net7.0\SR.DataAccess.csproj.CoreCompileInputs.cache
+C:\Elio\Development\Projects\SchoolRegistration\SR.DataAccess\bin\Debug\net7.0\SR.DataAccess.deps.json
+C:\Elio\Development\Projects\SchoolRegistration\SR.DataAccess\bin\Debug\net7.0\SR.DataAccess.runtimeconfig.json
+C:\Elio\Development\Projects\SchoolRegistration\SR.DataAccess\bin\Debug\net7.0\SR.DataAccess.dll
+C:\Elio\Development\Projects\SchoolRegistration\SR.DataAccess\bin\Debug\net7.0\SR.DataAccess.pdb
+C:\Elio\Development\Projects\SchoolRegistration\SR.DataAccess\bin\Debug\net7.0\SR.Models.dll
+C:\Elio\Development\Projects\SchoolRegistration\SR.DataAccess\bin\Debug\net7.0\SR.Models.pdb
+C:\Elio\Development\Projects\SchoolRegistration\SR.DataAccess\obj\Debug\net7.0\SR.DataAccess.csproj.CopyComplete
+C:\Elio\Development\Projects\SchoolRegistration\SR.DataAccess\obj\Debug\net7.0\SR.DataAccess.dll
+C:\Elio\Development\Projects\SchoolRegistration\SR.DataAccess\obj\Debug\net7.0\refint\SR.DataAccess.dll
+C:\Elio\Development\Projects\SchoolRegistration\SR.DataAccess\obj\Debug\net7.0\SR.DataAccess.pdb
+C:\Elio\Development\Projects\SchoolRegistration\SR.DataAccess\obj\Debug\net7.0\SR.DataAccess.genruntimeconfig.cache
+C:\Elio\Development\Projects\SchoolRegistration\SR.DataAccess\obj\Debug\net7.0\ref\SR.DataAccess.dll
