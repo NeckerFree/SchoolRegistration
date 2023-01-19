@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SR.DataAccess\SR.DataAccess.csproj" />
+    <ProjectReference Include="..\SR.Domain\SR.Domain.csproj" />
+    <ProjectReference Include="..\SR.Models\SR.Models.csproj" />
+  </ItemGroup>
+
+</Project>

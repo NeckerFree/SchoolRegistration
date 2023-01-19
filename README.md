@@ -267,9 +267,19 @@ I would like to thank...
 
 > Add at least 2 questions new developers would ask when they decide to use your project.
 
-- **[Question_1]**
+ - **What command are required to Scaffold from Scratch a DB First?**
 
-  - [Answer_1]
+  - Run next commands:
+  ```
+    dotnet add SR.DataAccess package Microsoft.EntityFrameworkCore.Design
+    dotnet add SR.DataAccess package Microsoft.EntityFrameworkCore.SqlServer
+    dotnet add SR.DataAccess package Microsoft.EntityFrameworkCore.Tools
+    dotnet tool update --global dotnet-ef
+    dotnet ef dbcontext scaffold "Data Source=localhost\ELIO_SQL;Initial Catalog=Oiga_DB; User Id=Oiga_User;Password=Oiga_Pwd$;Encrypt=False" Microsoft.EntityFrameworkCore.SqlServer --project SR.DataAccess --output-dir "SR.Models\Models" --context-dir "SR.DataAccess\Data" --namespace SR.Models --context-namespace SR.DataAccess --context SchoolContext -f --no-onconfiguring --data-annotations
+    dotnet tool install --global dotnet-ef
+    dotnet tool update --global dotnet-ef 
+  ```
+ [Answer_1]
 
 - **[Question_2]**
 

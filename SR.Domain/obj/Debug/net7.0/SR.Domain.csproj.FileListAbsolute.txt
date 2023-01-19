@@ -1,0 +1,15 @@
+C:\Elio\Development\Projects\SchoolRegistration\SR.Domain\obj\Debug\net7.0\SR.Domain.csproj.AssemblyReference.cache
+C:\Elio\Development\Projects\SchoolRegistration\SR.Domain\obj\Debug\net7.0\SR.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Elio\Development\Projects\SchoolRegistration\SR.Domain\obj\Debug\net7.0\SR.Domain.AssemblyInfoInputs.cache
+C:\Elio\Development\Projects\SchoolRegistration\SR.Domain\obj\Debug\net7.0\SR.Domain.AssemblyInfo.cs
+C:\Elio\Development\Projects\SchoolRegistration\SR.Domain\obj\Debug\net7.0\SR.Domain.csproj.CoreCompileInputs.cache
+C:\Elio\Development\Projects\SchoolRegistration\SR.Domain\bin\Debug\net7.0\SR.Domain.deps.json
+C:\Elio\Development\Projects\SchoolRegistration\SR.Domain\bin\Debug\net7.0\SR.Domain.dll
+C:\Elio\Development\Projects\SchoolRegistration\SR.Domain\bin\Debug\net7.0\SR.Domain.pdb
+C:\Elio\Development\Projects\SchoolRegistration\SR.Domain\bin\Debug\net7.0\SR.Models.dll
+C:\Elio\Development\Projects\SchoolRegistration\SR.Domain\bin\Debug\net7.0\SR.Models.pdb
+C:\Elio\Development\Projects\SchoolRegistration\SR.Domain\obj\Debug\net7.0\SR.Domain.csproj.CopyComplete
+C:\Elio\Development\Projects\SchoolRegistration\SR.Domain\obj\Debug\net7.0\SR.Domain.dll
+C:\Elio\Development\Projects\SchoolRegistration\SR.Domain\obj\Debug\net7.0\refint\SR.Domain.dll
+C:\Elio\Development\Projects\SchoolRegistration\SR.Domain\obj\Debug\net7.0\SR.Domain.pdb
+C:\Elio\Development\Projects\SchoolRegistration\SR.Domain\obj\Debug\net7.0\ref\SR.Domain.dll
