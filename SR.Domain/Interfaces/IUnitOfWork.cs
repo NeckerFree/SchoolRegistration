@@ -4,7 +4,7 @@
     {
         //IBusinessEntityContactRepository BusinessEntityContacts { get; }
         //IContactTypeRepository ContactTypes { get; }
-        IStudentRepository People { get; }
+        IStudentRepository Students { get; }
         IEvaluationRepository Evaluationes { get; }
         ICourseRepository Courses { get; }
         int Complete();

@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using SR.DataAccess;
 using SR.Models;
+using SR.WebApp.Models;
+
 
 namespace SR.WebApp.Controllers
 {
@@ -20,10 +18,76 @@ namespace SR.WebApp.Controllers
         }
 
         // GET: Evaluations
-        public async Task<IActionResult> Index()
+        //public async Task<IActionResult> Index()
+        //{
+        //    var schoolContext = _context.Evaluations.Include(e => e.CourseStudent);
+        //    //NewEvaluation newEvaluation= new NewEvaluation();
+        //    //newEvaluation.Evaluation = await schoolContext.ToListAsync();
+        //    //return View(newEvaluation);
+        //    return View(await schoolContext.ToListAsync());
+        //}
+        public async Task<IActionResult> Index(Guid id, int selectedStart = 0)
         {
-            var schoolContext = _context.Evaluations.Include(e => e.CourseStudent);
-            return View(await schoolContext.ToListAsync());
+            IQueryable<DTOEvaluation> evaluationsByCourse = GetEvaluations(id, selectedStart);
+            ModelEvaluation modelEvaluations = new ModelEvaluation()
+            {
+                IdCourse = id,
+                Evaluations = evaluationsByCourse,
+
+            };
+
+            if (evaluationsByCourse != null)
+            {
+                modelEvaluations.Evaluations = await evaluationsByCourse.ToListAsync();
+                return View(modelEvaluations);
+            }
+            return Problem("'Evaluations By Course'  is null.");
+        }
+
+        private IQueryable<DTOEvaluation> GetEvaluations(Guid id, int selectedStart)
+        {
+            IQueryable<DTOEvaluation> evaluationsByCourse = (from ev in _context.Evaluations
+                                                             join cs in _context.CourseStudents on ev.CourseStudentId equals cs.Id
+                                                             join c in _context.Courses on cs.CourseId equals c.Id
+                                                             join s in _context.Students on cs.StudentId equals s.Id
+                                                             orderby ev.CreationDate 
+                                                             select new DTOEvaluation
+                                                             {
+                                                                 Id = id,
+                                                                 CourseId=c.Id,
+                                                                 Name = c.Name,
+                                                                 StudentName=s.FullName,
+                                                                 Active = c.Active,
+                                                                 CreationDate = ev.CreationDate,
+                                                                 Description = ev.Description,
+                                                                 Grade = cs.Grade,
+                                                                 Stars = ev.Stars
+                                                             });
+            if (id != Guid.Empty)
+            {
+                evaluationsByCourse = (from ec in evaluationsByCourse
+                                       where ec.CourseId == id
+                                       select ec);
+            }
+            if (selectedStart > 0)
+            {
+                evaluationsByCourse = (from ec in evaluationsByCourse
+                                       where ec.Stars == selectedStart
+                                       select ec);
+            }
+            return evaluationsByCourse;
+        }
+
+        // GET: DTOEvaluations/Filter/5
+        public ActionResult Filter()
+        {
+            FilterData filterData = new FilterData
+            {
+                IdCourse = Guid.Parse(Request.Form["IdCourse"].ToString()),
+                SelectedStar = int.Parse(Request.Form["SelectedStar"].ToString())
+            };
+            return RedirectToAction("Index", new { id = filterData.IdCourse, selectedStart = filterData.SelectedStar });
+
         }
 
         // GET: Evaluations/Details/5
@@ -48,7 +112,25 @@ namespace SR.WebApp.Controllers
         // GET: Evaluations/Create
         public IActionResult Create()
         {
-            ViewData["CourseStudentId"] = new SelectList(_context.CourseStudents, "Id", "Id");
+            //List<SelectListItem> items = new List<SelectListItem>();
+
+            //items.Add(new SelectListItem { Text = "Action", Value = "0" });
+
+            //items.Add(new SelectListItem { Text = "Drama", Value = "1" });
+
+            //items.Add(new SelectListItem { Text = "Comedy", Value = "2", Selected = true });
+
+            //items.Add(new SelectListItem { Text = "Science Fiction", Value = "3" });
+
+            //ViewBag.MovieType = items;
+            //var data = (from cs in _context.CourseStudents
+            //            join c in _context.Courses on cs.CourseId equals c.Id
+            //            select new { c, cs }
+            //          );
+            //ViewBag.CourseStudents = new SelectList(data, "Id", "Name");
+            ViewData["Courses"] = new SelectList(_context.Courses, "Id", "Name");
+                     
+            ViewData["Students"] = new SelectList(_context.Students, "Id", "FullName");
             return View();
         }
 
@@ -57,17 +139,35 @@ namespace SR.WebApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("CourseStudentId,Stars,Description,CreationDate")] Evaluation evaluation)
+        public async Task<IActionResult> Create([Bind("CourseId, StudentId,Stars,Description,CreationDate")] NewEvaluation newEvaluation)
         {
             if (ModelState.IsValid)
             {
+                Evaluation evaluation = newEvaluation;
                 evaluation.Id = Guid.NewGuid();
+
+                var courseStudentId = (from cs in _context.CourseStudents 
+                                             where cs.CourseId==newEvaluation.CourseId && cs.StudentId==newEvaluation.StudentId
+                                             select cs.Id).FirstOrDefault();
+                evaluation.CourseStudentId = courseStudentId;
+                if (courseStudentId == Guid.Empty)
+                {
+                    CourseStudent courseStudent = new CourseStudent
+                    {
+                        CourseId = newEvaluation.CourseId,
+                        StudentId = newEvaluation.StudentId,
+                        Id = Guid.NewGuid()
+                    };
+                    _context.CourseStudents.Add(courseStudent);
+                    _context.SaveChanges();
+                    evaluation.CourseStudentId = courseStudent.Id;
+               }
                 _context.Add(evaluation);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CourseStudentId"] = new SelectList(_context.CourseStudents, "Id", "Id", evaluation.CourseStudentId);
-            return View(evaluation);
+            ViewData["CourseStudentId"] = new SelectList(_context.CourseStudents, "Id", "Id", newEvaluation.CourseStudentId);
+            return View(newEvaluation);
         }
 
         // GET: Evaluations/Edit/5

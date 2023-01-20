@@ -56,6 +56,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Elio/Development/Projects/SchoolRegistration/SR.WebApp/Views/DTOEvaluations/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRFRPRXZhbHVhdGlvbnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Elio/Development/Projects/SchoolRegistration/SR.WebApp/Views/Evaluations/AntIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZhbHVhdGlvbnNcQW50SW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Elio/Development/Projects/SchoolRegistration/SR.WebApp/Views/Evaluations/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZhbHVhdGlvbnNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

@@ -2,9 +2,9 @@
 {
     public  interface IStudentService
     {
-        Task<IEnumerable<DTOPeople>> GetAllPeople();
+        Task<IEnumerable<DTOStudents>> GetAllStudents();
 
-        PagedList<DTOPeople> GetPagedPeople(StudentParameters StudentParameters);
+        PagedList<DTOStudents> GetPagedStudents(StudentParameters StudentParameters);
     }
     
 }
