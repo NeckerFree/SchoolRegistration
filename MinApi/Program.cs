@@ -67,28 +67,28 @@ internal record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary
 
 //app.UseHttpsRedirection();
 
-//app.MapGet("/getAllPeople", async (IStudentService StudentService) =>
+//app.MapGet("/getAllStudents", async (IStudentService StudentService) =>
 //{
-//    return await StudentService.GetAllPeople();
+//    return await StudentService.GetAllStudents();
 //});
-//app.MapGet("/getAdvancedPeople", (HttpContext http, IStudentService StudentService, [AsParameters] StudentParameters StudentParameters) =>
+//app.MapGet("/getAdvancedStudents", (HttpContext http, IStudentService StudentService, [AsParameters] StudentParameters StudentParameters) =>
 //{
 //    if (!StudentParameters.ValidYearRange)
 //    {
 //        return Results.BadRequest("Max year of birth cannot be less than min year of birth");
 //    }
-//    var pagedPeople = StudentService.GetPagedPeople(StudentParameters);
+//    var pagedStudents = StudentService.GetPagedStudents(StudentParameters);
 //    var metadata = new
 //    {
-//        pagedPeople.TotalCount,
-//        pagedPeople.PageSize,
-//        pagedPeople.CurrentPage,
-//        pagedPeople.TotalPages,
-//        pagedPeople.HasNext,
-//        pagedPeople.HasPrevious
+//        pagedStudents.TotalCount,
+//        pagedStudents.PageSize,
+//        pagedStudents.CurrentPage,
+//        pagedStudents.TotalPages,
+//        pagedStudents.HasNext,
+//        pagedStudents.HasPrevious
 //    };
 //    http.Response.Headers.Add("X-Pagination", JsonConvert.SerializeObject(metadata));
-//    return Results.Ok(pagedPeople);
+//    return Results.Ok(pagedStudents);
 //});
 
 

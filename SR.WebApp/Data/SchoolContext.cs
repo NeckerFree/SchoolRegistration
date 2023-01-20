@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using SR.WebApp.Models;
 
 
 namespace SR.DataAccess;
@@ -49,4 +50,6 @@ public partial class SchoolContext : DbContext
     }
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+
+    public DbSet<SR.WebApp.Models.DTOEvaluation> DTOEvaluation { get; set; } = default!;
 }

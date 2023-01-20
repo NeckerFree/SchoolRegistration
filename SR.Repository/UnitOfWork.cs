@@ -8,7 +8,7 @@ namespace SR.Repository
 
         private readonly SchoolContext _dbContext;
 
-        public IStudentRepository People { get; }
+        public IStudentRepository Students { get; }
 
         public IEvaluationRepository Evaluationes { get; }
 
@@ -20,7 +20,7 @@ namespace SR.Repository
                             ICourseRepository CourseRepository)
         {
             this._dbContext = dbContext;
-            this.People = StudentRepository;
+            this.Students = StudentRepository;
             this.Evaluationes = EvaluationRepository;
             this.Courses = CourseRepository;
         }

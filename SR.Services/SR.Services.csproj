@@ -10,9 +10,4 @@
     <PackageReference Include="System.Linq.Dynamic.Core" Version="1.2.24" />
   </ItemGroup>
 
-  
-   <ItemGroup>
-    <ProjectReference Include="..\SR.Domain\SR.Domain.csproj" />
-  </ItemGroup>
-
 </Project>

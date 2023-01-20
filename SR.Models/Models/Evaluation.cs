@@ -13,7 +13,8 @@ public partial class Evaluation
     [Column("course_student_id")]
     public Guid? CourseStudentId { get; set; }
 
-    [Column("stars")]
+  [Column("stars")]
+    [Range(1, 5)]
     public int? Stars { get; set; }
 
     [Column("description")]

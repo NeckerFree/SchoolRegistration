@@ -1,6 +1,6 @@
 ﻿namespace SR.Services
 {
-    public class DTOPeople
+    public class DTOStudents
     {
         public int BusinessEntityId { get; internal set; }
         public string? Title { get; internal set; }

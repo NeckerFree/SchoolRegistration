@@ -15,25 +15,25 @@ namespace SR.Services
             _unitOfWork = unitOfWork;
         }
 
-        public Task<IEnumerable<DTOPeople>> GetAllPeople()
+        public Task<IEnumerable<DTOStudents>> GetAllStudents()
         {
             throw new NotImplementedException();
         }
 
-        public PagedList<DTOPeople> GetPagedPeople(StudentParameters StudentParameters)
+        public PagedList<DTOStudents> GetPagedStudents(StudentParameters StudentParameters)
         {
             throw new NotImplementedException();
         }
 
-        //public async Task<IEnumerable<DTOPeople>> GetAllPeople()
+        //public async Task<IEnumerable<DTOStudents>> GetAllStudents()
         //{
-        //    var people = await _unitOfWork.People.GetAll();
+        //    var Students = await _unitOfWork.Students.GetAll();
         //    var Evaluation = await _unitOfWork.Evaluationes.GetAll();
         //    var Courses = await _unitOfWork.Courses.GetAll();
-        //    var result = (from p in people
+        //    var result = (from p in Students
         //                  join em in Courses on p.BusinessEntityId equals em.BusinessEntityId
         //                  join e in Evaluation on p.BusinessEntityId equals e.BusinessEntityId
-        //                  select new DTOPeople
+        //                  select new DTOStudents
         //                  {
         //                      BusinessEntityId = p.BusinessEntityId,
         //                      Title = p.Title,
@@ -50,32 +50,32 @@ namespace SR.Services
 
 
 
-        //public PagedList<DTOPeople> GetPagedPeople(StudentParameters StudentParameters)
+        //public PagedList<DTOStudents> GetPagedStudents(StudentParameters StudentParameters)
         //{
-        //    var allPeople = GetAllPeople().Result.AsQueryable<DTOPeople>();
+        //    var allStudents = GetAllStudents().Result.AsQueryable<DTOStudents>();
 
         //    if (StudentParameters.MinYearOfBirth != null && StudentParameters.MaxYearOfBirth != null)
         //    {
-        //        allPeople = allPeople.Where(o => o.BirthDate.Year >= StudentParameters.MinYearOfBirth && o.BirthDate.Year <= StudentParameters.MaxYearOfBirth);
+        //        allStudents = allStudents.Where(o => o.BirthDate.Year >= StudentParameters.MinYearOfBirth && o.BirthDate.Year <= StudentParameters.MaxYearOfBirth);
         //    }
-        //    SearchPeople(ref allPeople, StudentParameters.Name, StudentParameters.JobTitle);
-        //    OrderPeople(ref allPeople, StudentParameters.OrderBy);
-        //    return PagedList<DTOPeople>.ToPagedList(allPeople, StudentParameters.PageNumber, StudentParameters.PageSize);
+        //    SearchStudents(ref allStudents, StudentParameters.Name, StudentParameters.JobTitle);
+        //    OrderStudents(ref allStudents, StudentParameters.OrderBy);
+        //    return PagedList<DTOStudents>.ToPagedList(allStudents, StudentParameters.PageNumber, StudentParameters.PageSize);
         //}
 
-        private void OrderPeople(ref IQueryable<DTOPeople> allPeople, string? orderBy)
+        private void OrderStudents(ref IQueryable<DTOStudents> allStudents, string? orderBy)
         {
-            if (!allPeople.Any())
+            if (!allStudents.Any())
             {
                 return;
             }
             if (string.IsNullOrWhiteSpace(orderBy))
             {
-                allPeople.OrderBy(p => p.FullName);
+                allStudents.OrderBy(p => p.FullName);
                 return;
             }
             var orderParameters = orderBy.Trim().Split(',');
-            var propertyInfos = typeof(DTOPeople).GetProperties(BindingFlags.Public | BindingFlags.Instance);
+            var propertyInfos = typeof(DTOStudents).GetProperties(BindingFlags.Public | BindingFlags.Instance);
             var orderQueryBuilder = new StringBuilder();
             foreach (var orderParam in orderParameters)
             {
@@ -87,17 +87,17 @@ namespace SR.Services
                 orderQueryBuilder.Append($"{objectProperty.Name.ToString()} {sortingOrder}, ");
             }
             var orderQuery = orderQueryBuilder.ToString().TrimEnd(',', ' ');
-            allPeople = allPeople.OrderBy(orderQuery);
+            allStudents = allStudents.OrderBy(orderQuery);
             return;
         }
 
 
-        private void SearchPeople(ref IQueryable<DTOPeople> allPeople, string? name, string? jobTitle)
+        private void SearchStudents(ref IQueryable<DTOStudents> allStudents, string? name, string? jobTitle)
         {
-            if (allPeople.Any() == false) return;
+            if (allStudents.Any() == false) return;
             if (string.IsNullOrWhiteSpace(name) && string.IsNullOrWhiteSpace(jobTitle)) return;
-            allPeople = ((IQueryable<DTOPeople>)(
-                from ap in allPeople
+            allStudents = ((IQueryable<DTOStudents>)(
+                from ap in allStudents
                 where (
                 (string.IsNullOrWhiteSpace(ap.FullName) || string.IsNullOrWhiteSpace(name) || ap.FullName.ToLower().Contains(name.Trim().ToLower())) &&
                 (string.IsNullOrWhiteSpace(ap.JobTitle) || string.IsNullOrWhiteSpace(jobTitle) || ap.JobTitle.ToLower().Contains(jobTitle.Trim().ToLower())))

@@ -1042,19 +1042,6 @@
           "bin/placeholder/SR.DataAccess.dll": {}
         }
       },
-      "SR.Domain/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
-        "dependencies": {
-          "SR.Models": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/SR.Domain.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/SR.Domain.dll": {}
-        }
-      },
       "SR.Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -3216,11 +3203,6 @@
       "path": "../SR.DataAccess/SR.DataAccess.csproj",
       "msbuildProject": "../SR.DataAccess/SR.DataAccess.csproj"
     },
-    "SR.Domain/1.0.0": {
-      "type": "project",
-      "path": "../SR.Domain/SR.Domain.csproj",
-      "msbuildProject": "../SR.Domain/SR.Domain.csproj"
-    },
     "SR.Models/1.0.0": {
       "type": "project",
       "path": "../SR.Models/SR.Models.csproj",
@@ -3230,7 +3212,6 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "SR.DataAccess >= 1.0.0",
-      "SR.Domain >= 1.0.0",
       "SR.Models >= 1.0.0"
     ]
   },
@@ -3267,9 +3248,6 @@
           "projectReferences": {
             "C:\\Elio\\Development\\Projects\\SchoolRegistration\\SR.DataAccess\\SR.DataAccess.csproj": {
               "projectPath": "C:\\Elio\\Development\\Projects\\SchoolRegistration\\SR.DataAccess\\SR.DataAccess.csproj"
-            },
-            "C:\\Elio\\Development\\Projects\\SchoolRegistration\\SR.Domain\\SR.Domain.csproj": {
-              "projectPath": "C:\\Elio\\Development\\Projects\\SchoolRegistration\\SR.Domain\\SR.Domain.csproj"
             },
             "C:\\Elio\\Development\\Projects\\SchoolRegistration\\SR.Models\\SR.Models.csproj": {
               "projectPath": "C:\\Elio\\Development\\Projects\\SchoolRegistration\\SR.Models\\SR.Models.csproj"
