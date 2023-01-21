@@ -1,7 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Http.HttpResults;
+﻿using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.EntityFrameworkCore;
 using SR.DataAccess;
 using SR.Models;
+
 namespace SR.MinApi.EndPoints;
 
 public static class EvaluationEndpoints

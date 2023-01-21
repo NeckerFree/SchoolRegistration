@@ -1,0 +1,17 @@
+C:\Elio\Development\Projects\SchoolRegistration\SR.BusinessRules\bin\Debug\net7.0\SR.BusinessRules.deps.json
+C:\Elio\Development\Projects\SchoolRegistration\SR.BusinessRules\bin\Debug\net7.0\SR.BusinessRules.dll
+C:\Elio\Development\Projects\SchoolRegistration\SR.BusinessRules\bin\Debug\net7.0\SR.BusinessRules.pdb
+C:\Elio\Development\Projects\SchoolRegistration\SR.BusinessRules\bin\Debug\net7.0\SR.DataAccess.dll
+C:\Elio\Development\Projects\SchoolRegistration\SR.BusinessRules\bin\Debug\net7.0\SR.Models.dll
+C:\Elio\Development\Projects\SchoolRegistration\SR.BusinessRules\bin\Debug\net7.0\SR.DataAccess.pdb
+C:\Elio\Development\Projects\SchoolRegistration\SR.BusinessRules\bin\Debug\net7.0\SR.Models.pdb
+C:\Elio\Development\Projects\SchoolRegistration\SR.BusinessRules\obj\Debug\net7.0\SR.BusinessRules.csproj.AssemblyReference.cache
+C:\Elio\Development\Projects\SchoolRegistration\SR.BusinessRules\obj\Debug\net7.0\SR.BusinessRules.GeneratedMSBuildEditorConfig.editorconfig
+C:\Elio\Development\Projects\SchoolRegistration\SR.BusinessRules\obj\Debug\net7.0\SR.BusinessRules.AssemblyInfoInputs.cache
+C:\Elio\Development\Projects\SchoolRegistration\SR.BusinessRules\obj\Debug\net7.0\SR.BusinessRules.AssemblyInfo.cs
+C:\Elio\Development\Projects\SchoolRegistration\SR.BusinessRules\obj\Debug\net7.0\SR.BusinessRules.csproj.CoreCompileInputs.cache
+C:\Elio\Development\Projects\SchoolRegistration\SR.BusinessRules\obj\Debug\net7.0\SR.BusinessRules.csproj.CopyComplete
+C:\Elio\Development\Projects\SchoolRegistration\SR.BusinessRules\obj\Debug\net7.0\SR.BusinessRules.dll
+C:\Elio\Development\Projects\SchoolRegistration\SR.BusinessRules\obj\Debug\net7.0\refint\SR.BusinessRules.dll
+C:\Elio\Development\Projects\SchoolRegistration\SR.BusinessRules\obj\Debug\net7.0\SR.BusinessRules.pdb
+C:\Elio\Development\Projects\SchoolRegistration\SR.BusinessRules\obj\Debug\net7.0\ref\SR.BusinessRules.dll

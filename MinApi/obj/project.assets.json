@@ -3768,6 +3768,20 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
+      "SR.BusinessRules/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "SR.DataAccess": "1.0.0",
+          "SR.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SR.BusinessRules.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SR.BusinessRules.dll": {}
+        }
+      },
       "SR.DataAccess/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -11049,6 +11063,11 @@
         "system.xml.xdocument.nuspec"
       ]
     },
+    "SR.BusinessRules/1.0.0": {
+      "type": "project",
+      "path": "../SR.BusinessRules/SR.BusinessRules.csproj",
+      "msbuildProject": "../SR.BusinessRules/SR.BusinessRules.csproj"
+    },
     "SR.DataAccess/1.0.0": {
       "type": "project",
       "path": "../SR.DataAccess/SR.DataAccess.csproj",
@@ -11066,6 +11085,7 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.2",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.2",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 7.0.2",
+      "SR.BusinessRules >= 1.0.0",
       "SR.DataAccess >= 1.0.0",
       "SR.Models >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.4.0"
@@ -11102,6 +11122,9 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
+            "C:\\Elio\\Development\\Projects\\SchoolRegistration\\SR.BusinessRules\\SR.BusinessRules.csproj": {
+              "projectPath": "C:\\Elio\\Development\\Projects\\SchoolRegistration\\SR.BusinessRules\\SR.BusinessRules.csproj"
+            },
             "C:\\Elio\\Development\\Projects\\SchoolRegistration\\SR.DataAccess\\SR.DataAccess.csproj": {
               "projectPath": "C:\\Elio\\Development\\Projects\\SchoolRegistration\\SR.DataAccess\\SR.DataAccess.csproj"
             },

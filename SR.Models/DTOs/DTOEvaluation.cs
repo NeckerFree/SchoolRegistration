@@ -1,14 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using SR.Models;
-using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace SR.WebApp.Models
+namespace SR.Models.DTOs
 {
     public class DTOEvaluation
     {
-        internal string? StudentName;
-
         [Key]
         [Column("id")]
         public Guid Id { get; set; }
@@ -27,6 +25,8 @@ namespace SR.WebApp.Models
         public string? Description { get; set; }
         [Column("creation_date", TypeName = "date")]
         public DateTime? CreationDate { get; set; }
-        public Guid CourseId { get; internal set; }
+        public Guid CourseId { get;  set; }
+        public string? StudentName { get; set; }
+        
     }
 }

@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SR.BusinessRules\SR.BusinessRules.csproj" />
     <ProjectReference Include="..\SR.DataAccess\SR.DataAccess.csproj" />
     <ProjectReference Include="..\SR.Models\SR.Models.csproj" />
   </ItemGroup>

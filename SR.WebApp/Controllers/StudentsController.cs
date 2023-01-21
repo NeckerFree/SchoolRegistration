@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Policy;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 using SR.DataAccess;
 using SR.Models;
 
@@ -27,6 +29,7 @@ namespace SR.WebApp.Controllers
                           Problem("Entity set 'SchoolContext.Students'  is null.");
         }
 
+        
         // GET: Students/Details/5
         public async Task<IActionResult> Details(Guid? id)
         {
@@ -160,5 +163,16 @@ namespace SR.WebApp.Controllers
         {
           return (_context.Students?.Any(e => e.Id == id)).GetValueOrDefault();
         }
+
+        //public async Task<List<Student>?> IndexAll()
+        //{
+        //    var httpClient = new HttpClient();
+        //    var response = await httpClient.GetAsync("https://localhost:7101/api/Student");
+
+        //    response.EnsureSuccessStatusCode();
+
+        //    var content = await response.Content.ReadAsStringAsync();
+        //    return JsonConvert.DeserializeObject<List<Student>>(content);
+        //}
     }
 }

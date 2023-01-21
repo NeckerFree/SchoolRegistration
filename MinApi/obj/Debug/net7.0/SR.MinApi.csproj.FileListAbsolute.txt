@@ -278,3 +278,5 @@ C:\Elio\Development\Projects\SchoolRegistration\MinApi\obj\Debug\net7.0\SR.MinAp
 C:\Elio\Development\Projects\SchoolRegistration\MinApi\obj\Debug\net7.0\ref\SR.MinApi.dll
 C:\Elio\Development\Projects\SchoolRegistration\MinApi\bin\Debug\net7.0\SR.DataAccess.dll
 C:\Elio\Development\Projects\SchoolRegistration\MinApi\bin\Debug\net7.0\SR.DataAccess.pdb
+C:\Elio\Development\Projects\SchoolRegistration\MinApi\bin\Debug\net7.0\SR.BusinessRules.dll
+C:\Elio\Development\Projects\SchoolRegistration\MinApi\bin\Debug\net7.0\SR.BusinessRules.pdb

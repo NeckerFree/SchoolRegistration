@@ -1,8 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using SR.BusinessRules;
 using SR.DataAccess;
 using SR.Models;
+using SR.Models.DTOs;
 using SR.WebApp.Models;
 
 
@@ -17,18 +19,14 @@ namespace SR.WebApp.Controllers
             _context = context;
         }
 
-        // GET: Evaluations
-        //public async Task<IActionResult> Index()
-        //{
-        //    var schoolContext = _context.Evaluations.Include(e => e.CourseStudent);
-        //    //NewEvaluation newEvaluation= new NewEvaluation();
-        //    //newEvaluation.Evaluation = await schoolContext.ToListAsync();
-        //    //return View(newEvaluation);
-        //    return View(await schoolContext.ToListAsync());
-        //}
         public async Task<IActionResult> Index(Guid id, int selectedStart = 0)
         {
-            IQueryable<DTOEvaluation> evaluationsByCourse = GetEvaluations(id, selectedStart);
+            IQueryable<DTOEvaluation> evaluationsByCourse;
+            using (var brEvaluation = new BREvaluation(_context)) 
+            {
+                evaluationsByCourse= brEvaluation.GetEvaluations(id, selectedStart);
+            }
+             
             ModelEvaluation modelEvaluations = new ModelEvaluation()
             {
                 IdCourse = id,
@@ -44,39 +42,7 @@ namespace SR.WebApp.Controllers
             return Problem("'Evaluations By Course'  is null.");
         }
 
-        private IQueryable<DTOEvaluation> GetEvaluations(Guid id, int selectedStart)
-        {
-            IQueryable<DTOEvaluation> evaluationsByCourse = (from ev in _context.Evaluations
-                                                             join cs in _context.CourseStudents on ev.CourseStudentId equals cs.Id
-                                                             join c in _context.Courses on cs.CourseId equals c.Id
-                                                             join s in _context.Students on cs.StudentId equals s.Id
-                                                             orderby ev.CreationDate 
-                                                             select new DTOEvaluation
-                                                             {
-                                                                 Id = id,
-                                                                 CourseId=c.Id,
-                                                                 Name = c.Name,
-                                                                 StudentName=s.FullName,
-                                                                 Active = c.Active,
-                                                                 CreationDate = ev.CreationDate,
-                                                                 Description = ev.Description,
-                                                                 Grade = cs.Grade,
-                                                                 Stars = ev.Stars
-                                                             });
-            if (id != Guid.Empty)
-            {
-                evaluationsByCourse = (from ec in evaluationsByCourse
-                                       where ec.CourseId == id
-                                       select ec);
-            }
-            if (selectedStart > 0)
-            {
-                evaluationsByCourse = (from ec in evaluationsByCourse
-                                       where ec.Stars == selectedStart
-                                       select ec);
-            }
-            return evaluationsByCourse;
-        }
+        
 
         // GET: DTOEvaluations/Filter/5
         public ActionResult Filter()
