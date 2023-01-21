@@ -1,39 +1,5 @@
 <a name="readme-top"></a>
 
-<!--
-HOW TO USE:
-This is an example of how you may give instructions on setting up your project locally.
-
-Modify this file to match your project and remove sections that don't apply.
-
-REQUIRED SECTIONS:
-- Table of Contents
-- About the Project
-  - Built With
-  - Live Demo
-- Getting Started
-- Authors
-- Future Features
-- Contributing
-- Show your support
-- Acknowledgements
-- License
-
-OPTIONAL SECTIONS:
-- FAQ
-
-After you're finished please remove all the comments and instructions!
--->
-
-<div align="center">
-  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
-
-  <h3><b>Microverse README Template</b></h3>
-
-</div>
-
 <!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
@@ -42,17 +8,12 @@ After you're finished please remove all the comments and instructions!
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
   - [Install](#install)
   - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
-- [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
 - [❓ FAQ (OPTIONAL)](#faq)
@@ -60,36 +21,44 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 [School Registration] <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
+**[School Registration]** is an application that allows the students rate the courses they are doing and perform CRUD operations to evaluate a course.
 
-**[your_project__name]** is a...
+**Minimal Web Api:**
+
+![Min Api](https://user-images.githubusercontent.com/8497300/213890418-648dc259-3910-4e32-9b5c-54a4fa01b3bb.png)
+
+**Get Filtered Evaluations:**
+
+![Get Filtered Evaluations](https://user-images.githubusercontent.com/8497300/213890430-d8958138-b826-4094-9f54-8659541b42bb.png)
+
+**ASP.NET Web App:**
+
+![Web App](https://user-images.githubusercontent.com/8497300/213890431-0e868d14-a50d-469d-ae65-015c27cbef07.png)
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
-
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
+    <li><a href="https://learn.microsoft.com/en-us/aspnet/core/mvc/overview?view=aspnetcore-7.0">ASP.NET MVC</a></li>
   </ul>
 </details>
 
 <details>
   <summary>Server</summary>
   <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
+    <li><a href="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis?view=aspnetcore-7.0">.NET Core Minimal API</a></li>
   </ul>
 </details>
 
 <details>
 <summary>Database</summary>
   <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+    <li><a href="https://www.microsoft.com/en-US/download/details.aspx?id=101064">SQL Server</a></li>
   </ul>
 </details>
 
@@ -97,137 +66,74 @@ After you're finished please remove all the comments and instructions!
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
-
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-> Add a link to your deployed project.
-
-- [Live Demo Link](https://yourdeployedapplicationlink.com)
+- **EF Core Database First**
+- **Data Annotations**
+- **Extension Methods**
+- **Dependency Injection**
+- **GIT Flow**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
-
-To get a local copy up and running, follow these steps.
+To get a local copy up and running, follow these steps:
 
 ### Prerequisites
 
 In order to run this project you need:
 
-<!--
-Example command:
-
-```sh
- gem install rails
-```
- -->
+- Visual Studio .NET 2022 updated to use NET Core 7
+- SQL Server Database 
 
 ### Setup
 
-Clone this repository to your desired folder:
-
-<!--
-Example commands:
+1. Clone this repository to your desired folder:
 
 ```sh
   cd my-folder
-  git clone git@github.com:myaccount/my-project.git
+  git clone https://github.com/NeckerFree/SchoolRegistration
 ```
---->
 
+2. Create the Application database in SQl Server
+
+3. Create a new User as db_owner of this batabase
+
+4. Modify the connection string (SchoolConnection) to point your database in the  files:
+```
+    \SR.WebApp\appsettings.json
+    \SR.MinApi\appsettings.json
+```
 ### Install
 
 Install this project with:
+1. Build the solution and assure that doesn't have errors
 
-<!--
-Example command:
-
-```sh
-  cd my-project
-  gem install
-```
---->
+2. Set the desired project as default 
+3. If require run backend and frontend at same time: in Solution Explorer, right-click the solution name and select Set Startup Project. 
+   Change the startup project from Single startup project to Multiple startup projects. Select Start for each project’s action.
 
 ### Usage
 
-To run the project, execute the following command:
+To run the project, 
 
-<!--
-Example command:
-
-```sh
-  rails server
-```
---->
-
-### Run tests
-
-To run tests, run the following command:
-
-<!--
-Example command:
-
-```sh
-  bin/rails test test/models/article_test.rb
-```
---->
-
-### Deployment
-
-You can deploy this project using:
-
-<!--
-Example:
-
-```sh
-
-```
- -->
+Start the application (F5), the /swagger/index.html page is displayed
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
 
+<!-- AUTHORS -->
+
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
+👤 **Elio Cortés**
 
-👤 **Author1**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FUTURE FEATURES -->
-
-## 🔭 Future Features <a name="future-features"></a>
-
-> Describe 1 - 3 features you will add to the project.
-
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- GitHub: [@NeckerFree](https://github.com/NeckerFree)
+- Twitter: [@ElioCortesM](https://twitter.com/ElioCortesM)
+- LinkedIn: [elionelsoncortes](https://www.linkedin.com/in/elionelsoncortes/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -247,17 +153,7 @@ Feel free to check the [issues page](../../issues/).
 
 > Write a message to encourage readers to support your project
 
-If you like this project...
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGEMENTS -->
-
-## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
-> Give credit to everyone who inspired your codebase.
-
-I would like to thank...
+If you like this project please start my project
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -265,16 +161,21 @@ I would like to thank...
 
 ## ❓ FAQ (OPTIONAL) <a name="faq"></a>
 
-> Add at least 2 questions new developers would ask when they decide to use your project.
+> - **What command are required to Scaffold from Scratch a DB First?**
 
-- **[Question_1]**
-
-  - [Answer_1]
-
-- **[Question_2]**
-
-  - [Answer_2]
-
+  - Run next commands:
+  ```
+    dotnet add SR.DataAccess package Microsoft.EntityFrameworkCore.Design
+    dotnet add SR.DataAccess package Microsoft.EntityFrameworkCore.SqlServer
+    dotnet add SR.DataAccess package Microsoft.EntityFrameworkCore.Tools
+    dotnet tool update --global dotnet-ef
+    dotnet ef dbcontext scaffold "Data Source=localhost\ELIO_SQL;Initial Catalog=[your database]; User Id=[your user];Password=[your password];Encrypt=False" 
+        Microsoft.EntityFrameworkCore.SqlServer --project SR.DataAccess --output-dir "SR.Models\Models" --context-dir "SR.DataAccess\Data" --namespace SR.Models 
+        --context-namespace SR.DataAccess --context SchoolContext -f --no-onconfiguring --data-annotations
+    dotnet tool install --global dotnet-ef
+    dotnet tool update --global dotnet-ef 
+  ```
+ 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LICENSE -->

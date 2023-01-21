@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "92h3RPmMNr8ACEqi3SFGMyD4gaSTyPGXp8uh0FXbvsJPIYVLsM9PBDpeTQMZAHWI03+fa27OOahcUc/ROBsjfg==",
+  "success": true,
+  "projectFilePath": "C:\\Elio\\Development\\Projects\\SchoolRegistration\\SR.Services\\SR.Services.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\elio_\\.nuget\\packages\\system.linq.dynamic.core\\1.2.24\\system.linq.dynamic.core.1.2.24.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\MinApi",
+    "\\MinApi\\EndPoints",
+    "\\SR.Models",
+    "\\SR.Models\\Models",
+    "\\SR.Repository",
+    "\\SR.WebApp",
+    "\\SR.WebApp\\Controllers",
+    "\\SR.WebApp\\Views",
+    "\\SR.WebApp\\Views\\Evaluations"
+  ],
+  "SelectedNode": "\\SR.WebApp\\Views\\Evaluations\\Create.cshtml",
+  "PreviewInSolutionExplorer": false
+}
