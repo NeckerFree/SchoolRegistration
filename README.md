@@ -25,6 +25,18 @@
 
 **[School Registration]** is an application that allows the students rate the courses they are doing and perform CRUD operations to evaluate a course.
 
+**Minimal Web Api:**
+
+![Min Api](https://user-images.githubusercontent.com/8497300/213890418-648dc259-3910-4e32-9b5c-54a4fa01b3bb.png)
+
+**Get Filtered Evaluations:**
+
+![Get Filtered Evaluations](https://user-images.githubusercontent.com/8497300/213890430-d8958138-b826-4094-9f54-8659541b42bb.png)
+
+**ASP.NET Web App:**
+
+![Web App](https://user-images.githubusercontent.com/8497300/213890431-0e868d14-a50d-469d-ae65-015c27cbef07.png)
+
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
