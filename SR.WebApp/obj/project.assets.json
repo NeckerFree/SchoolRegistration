@@ -3662,6 +3662,34 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
+      "SR.BusinessRules/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "SR.DataAccess": "1.0.0",
+          "SR.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SR.BusinessRules.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SR.BusinessRules.dll": {}
+        }
+      },
+      "SR.DataAccess/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.2",
+          "SR.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SR.DataAccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SR.DataAccess.dll": {}
+        }
+      },
       "SR.Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -10588,6 +10616,16 @@
         "system.xml.xdocument.nuspec"
       ]
     },
+    "SR.BusinessRules/1.0.0": {
+      "type": "project",
+      "path": "../SR.BusinessRules/SR.BusinessRules.csproj",
+      "msbuildProject": "../SR.BusinessRules/SR.BusinessRules.csproj"
+    },
+    "SR.DataAccess/1.0.0": {
+      "type": "project",
+      "path": "../SR.DataAccess/SR.DataAccess.csproj",
+      "msbuildProject": "../SR.DataAccess/SR.DataAccess.csproj"
+    },
     "SR.Models/1.0.0": {
       "type": "project",
       "path": "../SR.Models/SR.Models.csproj",
@@ -10599,6 +10637,7 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.2",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.2",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 7.0.2",
+      "SR.BusinessRules >= 1.0.0",
       "SR.Models >= 1.0.0"
     ]
   },
@@ -10633,6 +10672,9 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
+            "C:\\Elio\\Development\\Projects\\SchoolRegistration\\SR.BusinessRules\\SR.BusinessRules.csproj": {
+              "projectPath": "C:\\Elio\\Development\\Projects\\SchoolRegistration\\SR.BusinessRules\\SR.BusinessRules.csproj"
+            },
             "C:\\Elio\\Development\\Projects\\SchoolRegistration\\SR.Models\\SR.Models.csproj": {
               "projectPath": "C:\\Elio\\Development\\Projects\\SchoolRegistration\\SR.Models\\SR.Models.csproj"
             }

@@ -12,6 +12,7 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.2",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.2",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "7.0.2",
+          "SR.BusinessRules": "1.0.0",
           "SR.DataAccess": "1.0.0",
           "SR.Models": "1.0.0",
           "Swashbuckle.AspNetCore": "6.4.0"
@@ -2334,6 +2335,15 @@
           "System.Xml.ReaderWriter": "4.3.0"
         }
       },
+      "SR.BusinessRules/1.0.0": {
+        "dependencies": {
+          "SR.DataAccess": "1.0.0",
+          "SR.Models": "1.0.0"
+        },
+        "runtime": {
+          "SR.BusinessRules.dll": {}
+        }
+      },
       "SR.DataAccess/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.2",
@@ -3667,6 +3677,11 @@
       "sha512": "sha512-5zJ0XDxAIg8iy+t4aMnQAu0MqVbqyvfoUVl1yDV61xdo3Vth45oA2FoY4pPkxYAH5f8ixpmTqXeEIya95x0aCQ==",
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
+    },
+    "SR.BusinessRules/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "SR.DataAccess/1.0.0": {
       "type": "project",

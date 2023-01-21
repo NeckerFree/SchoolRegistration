@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SR.DataAccess;
 using SR.MinApi.EndPoints;
+using Microsoft.Extensions.DependencyInjection;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -29,6 +30,8 @@ app.MapStudentEndpoints();
 app.MapEvaluationEndpoints();
 
 app.MapCourseStudentEndpoints();
+
+app.MapDTOEvaluationEndpoints();
 
 app.Run();
 

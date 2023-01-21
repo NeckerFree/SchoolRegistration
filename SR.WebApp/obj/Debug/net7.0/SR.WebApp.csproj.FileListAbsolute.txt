@@ -275,3 +275,7 @@ C:\Elio\Development\Projects\SchoolRegistration\SR.WebApp\obj\Debug\net7.0\refin
 C:\Elio\Development\Projects\SchoolRegistration\SR.WebApp\obj\Debug\net7.0\SR.WebApp.pdb
 C:\Elio\Development\Projects\SchoolRegistration\SR.WebApp\obj\Debug\net7.0\SR.WebApp.genruntimeconfig.cache
 C:\Elio\Development\Projects\SchoolRegistration\SR.WebApp\obj\Debug\net7.0\ref\SR.WebApp.dll
+C:\Elio\Development\Projects\SchoolRegistration\SR.WebApp\bin\Debug\net7.0\SR.BusinessRules.dll
+C:\Elio\Development\Projects\SchoolRegistration\SR.WebApp\bin\Debug\net7.0\SR.DataAccess.dll
+C:\Elio\Development\Projects\SchoolRegistration\SR.WebApp\bin\Debug\net7.0\SR.BusinessRules.pdb
+C:\Elio\Development\Projects\SchoolRegistration\SR.WebApp\bin\Debug\net7.0\SR.DataAccess.pdb

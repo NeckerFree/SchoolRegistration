@@ -16,6 +16,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SR.WebApp", "SR.WebApp\SR.W
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SR.MinApi", "MinApi\SR.MinApi.csproj", "{AFBAFECA-7311-4FA7-A5FE-44E26EF2328A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SR.BusinessRules", "SR.BusinessRules\SR.BusinessRules.csproj", "{02640AF6-E5C3-4352-AA43-BB15AFC2A01F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +40,10 @@ Global
 		{AFBAFECA-7311-4FA7-A5FE-44E26EF2328A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AFBAFECA-7311-4FA7-A5FE-44E26EF2328A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AFBAFECA-7311-4FA7-A5FE-44E26EF2328A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02640AF6-E5C3-4352-AA43-BB15AFC2A01F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02640AF6-E5C3-4352-AA43-BB15AFC2A01F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02640AF6-E5C3-4352-AA43-BB15AFC2A01F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02640AF6-E5C3-4352-AA43-BB15AFC2A01F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
